@@ -5,10 +5,7 @@ import com.kyw.springcloud.entities.Payment;
 import com.kyw.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Classname PaymentController
@@ -25,7 +22,7 @@ public class PaymentController {
 
 
     @PostMapping("/payment/create")
-    public CommonResult create(Payment payment){
+    public CommonResult create(@RequestBody Payment payment){
 
         int count = paymentService.create(payment);
         log.info("####插入结果####:"+count);
