@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.UUID;
 
 /**
- * @author kyw
- * @version 1.0
- * @date 2021/3/25 17:24
+ * @Classname PaymentController
+ * @Description TODO
+ * @Date 2021/3/25 20:43
+ * @Created by kyw
  */
 @RestController
 @Slf4j
@@ -23,5 +24,4 @@ public class PaymentController {
     public String paymentzk(){
         return "springcloud with zookeeper: " + serverPort + "\t" + UUID.randomUUID().toString();
     }
-
 }

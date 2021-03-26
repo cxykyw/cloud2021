@@ -7,7 +7,7 @@ spring:
     name: cloud-provider-payment
   cloud:
     zookeeper:
-      connect-string: 127.0.0.1:2181
+      connect-string: 192.168.1.39:2181
       max-retries: 10
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
