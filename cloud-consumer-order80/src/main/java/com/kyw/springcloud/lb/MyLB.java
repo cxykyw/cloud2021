@@ -1,6 +1,7 @@
 package com.kyw.springcloud.lb;
 
 import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -11,6 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @Date 2021/3/30 23:32
  * @Created by kyw
  */
+@Component
 public class MyLB implements LoadBalancer{
 
     private AtomicInteger atomicInteger = new AtomicInteger(0);
